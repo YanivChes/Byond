@@ -247,16 +247,16 @@ public class LocomotionScript : MonoBehaviour
 
         var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
         input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleport;
-        //input.AimingController = OVRInput.Controller.RTouch;
+        input.AimingController = OVRInput.Controller.RTouch;
         //input.AimingController = OVRInput.Controller.LTouch;
-        input.AimingController = OVRInput.Controller.Touch;
+        //input.AimingController = OVRInput.Controller.Touch;
 
         ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerParabolic, TeleportTargetHandlerPhysical, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
         //ActivateTarget<TeleportTargetHandlerNavMesh>();
         var orient = TeleportController.GetComponent<TeleportOrientationHandlerThumbstick>();
-        //orient.Thumbstick = OVRInput.Controller.RTouch;
+        orient.Thumbstick = OVRInput.Controller.RTouch;
         //orient.Thumbstick = OVRInput.Controller.LTouch;
-        orient.Thumbstick = OVRInput.Controller.Touch;
+        //orient.Thumbstick = OVRInput.Controller.Touch;
     }
 
 
