@@ -23,7 +23,8 @@ public class VideoThumbnailPhill : MonoBehaviour
     {
         if (isActive)
         {
-            Invoke("SwitchVideoToTrue", 3f);
+            Invoke("SwitchVideoToTrue", 4f);
+            //SwitchVideoToTrue();
             audioSource.volume = 0;
         }
         else
@@ -38,12 +39,19 @@ public class VideoThumbnailPhill : MonoBehaviour
 
     private void SwithToVideo(bool isVideo)
     {
-        GetComponent<MeshRenderer>().enabled = isVideo;
-        placeHolder.GetComponent<MeshRenderer>().enabled = !isVideo;
+
         if (isVideo)
         {
-            audioSource.volume = 1;
             video.time = 0;
         }
+        StartCoroutine(SetPlaceHolder(isVideo));
+    }
+
+    private IEnumerator SetPlaceHolder(bool isVideo)
+    {
+        yield return new WaitForSeconds(0.2f);
+        audioSource.volume = 1;
+        GetComponent<MeshRenderer>().enabled = isVideo;
+        placeHolder.GetComponent<MeshRenderer>().enabled = !isVideo;
     }
 }

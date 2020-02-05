@@ -16,7 +16,9 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 	private bool ReadyToSnapTurn;
 	private Rigidbody _rigidbody;
 
-	public event Action CameraUpdated;
+    public bool SnapRotation { get; internal set; }
+
+    public event Action CameraUpdated;
 	public event Action PreCharacterMove;
 
 	private void Awake()
