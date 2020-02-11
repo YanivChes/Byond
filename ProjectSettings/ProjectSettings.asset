@@ -41,8 +41,8 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos:
   - logo: {fileID: 0}
-    duration: 2
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 00fb740ec256f4970aed499ffaace46b,
+    duration: 5
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 1596d0ea9aae34a62981039663e0dba9,
     type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -260,7 +260,7 @@ PlayerSettings:
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 2800000, guid: 00fb740ec256f4970aed499ffaace46b, type: 3}
+  androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{inproject}: '
   AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
